@@ -9,8 +9,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![License][mit-badge]][mit-url]
 
-This is a fork of https://github.com/cyberjunky/node-apcupsd - modified to follow 
-[mqtt-smarthome architectural proposal](https://mqtt-smarthome/mqtt-smarthome).
+This is a fork of https://github.com/hobbyquaker/apcupsd2mqtt bundled with dockerized apcupsd-installation.
 
 ## Install
 
@@ -21,7 +20,7 @@ This is a fork of https://github.com/cyberjunky/node-apcupsd - modified to follo
 `$ apcupsd2mqtt --help`
 
 ## License
-
+MQTT-functionality is licensed acccording to:
 MIT
 
 Copyright (c) 2017 Sebastian Raff    
