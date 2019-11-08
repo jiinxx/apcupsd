@@ -9,14 +9,18 @@ const config = require('./config.js');
 log.setLevel(config.verbosity);
 log.info(pkg.name + ' version ' + pkg.version + ' starting');
 
-const mqtt = Mqtt.connect(config.url);
+const mqtt = Mqtt.connect(config.mqttUrl, config.mqttConnectOptions);
 
 mqtt.on('connect', () => {
-    log.info('mqtt connected to', config.url);
+    log.info('mqtt connected to', config.mqttUrl);
 });
 
 mqtt.on('close', () => {
     log.warn('mqtt connection closed');
+});
+
+mqtt.on('error', function(err) {
+    log.debug(err);
 });
 
 const datapoints = ['upsname', 'status', 'linev', 'linefreq', 'loadpct', 'battv', 'bcharge', 'timeleft'];
