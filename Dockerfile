@@ -9,6 +9,6 @@ COPY config.js /usr/src/app
 COPY package.json /usr/src/app
 COPY index.js /usr/src/app
 
-run npm install -g apcupsd2mqtt
+run npm install -g
 
 CMD [ "/sbin/apcupsd", "-b" ]

@@ -14,7 +14,8 @@ module.exports = require('yargs')
         m: 'mqtt-url',
         n: 'name',
         u: 'ups-name',
-        v: 'verbosity'
+        v: 'verbosity',
+        o: 'mqtt-connect-options'
     })
     .default({
         interval: 10,
