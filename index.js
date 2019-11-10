@@ -74,7 +74,7 @@ function poll() {
                         const topic = config.name + '/status/' + devicename + '/' + label;
                         const payload = JSON.stringify({val: value});
                         log.debug('mqtt >', topic, payload);
-                        mqtt.publish(topic, payload, {retain: true});
+                        mqtt.publish(topic, value.toString(), {retain: true});
                     }
                 }
             });
