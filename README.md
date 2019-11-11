@@ -7,7 +7,7 @@ This is a fork of https://github.com/hobbyquaker/apcupsd2mqtt bundled with docke
 
 1. Clone repo
 2. Set needed env-vars. MQTT_HOST, MQTT_USER and MQTT_PWD
-3. Run with
+3. Run with something like
 ```
 docker run -d \
   --privileged \
@@ -22,4 +22,3 @@ docker run -d \
   urmo/apcupsd
 ```
 
-`$ apcupsd2mqtt --help`
